@@ -1,17 +1,26 @@
-let lArrow = document.querySelector('.lArrow');
-let rArrow = document.querySelector('.rArrow');
 let images = document.querySelectorAll('img');
-let count = 0;
+// let arrows = document.querySelectorAll('div > span');
+let lArrow = document.querySelector('span.lArrow');
+let rArrow = document.querySelector('span.rArrow');
+let score = 0;
 
 
-rArrow.addEventListener('click', () => {
+rArrow.addEventListener('click', (ev) => {
+    score++;
+    if (score === images.length) {
+        score = 0;
+    }
     for (let i = 0; i < images.length; i++) {
-        images[i].style.transform=`translateX(100)`;
-    }                
-})
+        images[i].style.transform = `translate(${score * -100}%, 0)`;
+    }
+});
 
-lArrow.addEventListener('click', () => {
+lArrow.addEventListener('click', (ev) => {
+    score--;
+    if (score < 0) {
+        score = images.length -1;
+    }
     for (let i = 0; i < images.length; i++) {
-        images[i].style.transform=`translateX(-100)`;
-    }                
-})
+        images[i].style.transform = `translate(${score * -100}%, 0)`;
+    }
+});

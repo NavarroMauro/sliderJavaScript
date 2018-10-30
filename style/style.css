@@ -9,7 +9,7 @@ body div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50vw;
+  width: 100%;
   background: rgba(0, 0, 0, 0.7);
   margin: 5vw auto;
   overflow: hidden;
@@ -18,20 +18,38 @@ body div {
 
 body div img {
   width: 100%;
-  height: 30vw;
+  height: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -webkit-transition: -webkit-transform .4s ease-out;
+  transition: -webkit-transform .4s ease-out;
+  transition: transform .4s ease-out;
+  transition: transform .4s ease-out, -webkit-transform .4s ease-out;
 }
 
 body div span {
+  width: 35%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
   position: absolute;
-  top: 12vw;
-  z-index: 1;
-  color: yellow;
-  font-size: 3vw;
+  top: 0;
+  z-index: 5;
+  color: black;
+  font-size: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body div span:hover {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
   cursor: pointer;
 }
 
