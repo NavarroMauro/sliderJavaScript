@@ -5,12 +5,16 @@
           box-sizing: border-box;
 }
 
+body {
+  font-size: 2vw;
+}
+
 body div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   margin: 5vw auto;
   overflow: hidden;
   position: relative;
@@ -35,7 +39,7 @@ body div span {
   top: 0;
   z-index: 5;
   color: black;
-  font-size: 2vw;
+  font-size: 2.5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

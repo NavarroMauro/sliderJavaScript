@@ -5,10 +5,11 @@
   }
 
   body {
+      font-size: 2vw;
       div {
         display: flex;
         width: 100%;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(0, 0, 0, 0.5);
         margin: 5vw auto;
         overflow: hidden;
         position: relative;
@@ -26,7 +27,7 @@
             top: 0;
             z-index: 5;
             color: black;
-            font-size: 2vw;
+            font-size: 2.5em;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
